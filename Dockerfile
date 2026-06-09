@@ -19,7 +19,7 @@ ENV PATH="$FOLDER/.venv/bin:$PATH"
 ENV UV_PYTHON=${PYTHON_VERSION}
 ENV HOME=/tmp
 
-USER 1000:1000
+USER root
 
 RUN uv python install ${PYTHON_VERSION} && \
     uv venv .venv && \
